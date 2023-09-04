@@ -4,12 +4,12 @@ function Features() {
     return (
         <div className='features'>
             <span style={{fontSize: '2rem', textAlign:'center', marginBottom:'1rem'}}> &nbsp;  Features:</span>
-            <div className='feature'>
+            {/* <div className='feature'>
                 <h3>Weekly Matches <span style={{fontSize:'.7rem', fontFamily:'Poppins', transform:'translate(0, -100%)'}}>(premium feature)</span></h3>
                 <p>"Say goodbye to swiping left and right for hours, we'll do the heavy lifting and bring you a selection of lovely matches every week. You can thank us later."
                    
                 </p>
-            </div>
+            </div> */}
 
             <div className='feature'>
                 <h3>Affordable Pricing </h3>
