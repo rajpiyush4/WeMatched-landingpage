@@ -1,0 +1,510 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --color1: #E86A33;
+  --color2: #E7B10A;
+  --color3: #9CA777;
+  --color4: #F5EBEB;
+  --color5: hsl(0, 33%, 84%);
+  --color6: #E8A0BF;
+
+
+}
+
+
+body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+#root {
+  width: 100%;
+}
+
+.App {
+  width: 100%;
+  font-family: "Poppins", sans-serif;
+  background-color: var(--color4);
+
+}
+
+input {
+  word-spacing: 2px;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+
+}
+
+/* label {
+
+} */
+
+label input[type='checkbox']:checked~span {
+  color: white !important;
+}
+
+button {
+  outline: none;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+
+.home {
+  width: 100%;
+  position: relative;
+  z-index: 3;
+}
+
+
+.ques {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.ques-modal {
+  position: relative;
+  width: 50%;
+  height: 50%;
+  background: #F5EBEB;
+  color: #16161d;
+  font-family: 'Playfair Display', serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  /* box-shadow: 6px 6px 6px 0px hsla(334, 61%, 47%, .2); */
+  transition: .3s;
+}
+
+.ques-modal:hover {
+  box-shadow: none;
+}
+
+.ques-modal-content {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+}
+
+.modal-buttons {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.modal-buttons button {
+  width: fit-content;
+  border-radius: 5px;
+  font-size: 1.4rem;
+  padding: .5rem 1rem .5rem 1;
+  /* background-color: whitesmoke; */
+  color: #16161d;
+  box-shadow: 4px 4px 0px rgb(15, 14, 15);
+  transition: .3s;
+  border: #16161d 1px solid;
+}
+
+.modal-buttons button:hover {
+  transform: translate(4px, 4px);
+  box-shadow: none;
+}
+
+.header {
+  position: relative;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  /* background-color: whitesmoke; */
+  padding: 1rem 2rem;
+  z-index: 9999;
+}
+
+.signup_head button {
+  position: absolute;
+  top: 1rem;
+  right: 2rem;
+  padding: .7rem 1.4rem .7rem 1.4rem;
+  border-radius: 50px;
+  outline: none;
+  backdrop-filter: blur(1px);
+  color: #24242b;
+  letter-spacing: 3px;
+  font-size: clamp(.3rem, 1vw, .7rem);
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: .3s;
+  font-family: "Poppins", sans-serif;
+  border: 2px solid #24242b;
+  z-index: 99999;
+  box-shadow: 3px 3px 0px rgba(0, 0, 0, 1);
+  transition: .3s;
+}
+
+.signup_head button:hover,
+.signup_head button:active {
+  box-shadow: none;
+  transform: translate(3px, 3px);
+}
+
+.logo {
+  font-size: clamp(1rem, 3vw, 2rem);
+  font-weight: 500;
+  user-select: none;
+  font-family: 'Poppins'
+}
+
+.comming{
+  font-size: clamp(1rem, 3vw, 2rem);
+  font-weight: 900;
+  color: rgba(0, 0, 0, .1);
+}
+
+button {
+  border: none;
+  outline: none;
+  background: none;
+  cursor: pointer;
+}
+
+.hello {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  background-color: var(--color4);
+  font-size: 2rem;
+  overflow: hidden;
+  user-select: none;
+  background-position-x: 100%;
+  z-index: 5;
+}
+
+
+.hello h1 {
+  z-index: 5;
+}
+
+.wellthen {
+  position: absolute;
+  transform: translate(-40%, -0%);
+  font-size: .7rem;
+}
+
+
+
+.about {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: hsl(0, 33%, 84%);
+  color: #16161d;
+  font-family: 'Playfair Display', serif;
+  overflow: hidden;
+  z-index: 5;
+}
+
+.about-content {
+  display: flex;
+  justify-content: center;
+  z-index: 2;
+  text-align: center;
+
+}
+
+.about-img {
+  position: fixed;
+  top: 20%;
+  right: 40%;
+  width: 300px;
+  height: 70%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url('./p.jpg');
+  background-size: cover;
+  background-position: center;
+  transform: rotate(-5deg);
+  opacity: .8;
+  z-index: 2;
+}
+
+.about-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  z-index: 2;
+}
+
+.about-index {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+.left {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  z-index: 5;
+  /* cursor: url('./assets/left.png'), auto; */
+
+
+}
+
+.right {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 100%;
+  z-index: 5;
+  /* cursor: url('./assets/right.png'), auto; */
+
+}
+
+.about .content {
+  width: 60%;
+  min-width: 300px;
+  height: 50%;
+  padding: 2rem;
+  border-radius: 5px;
+  font-size: clamp(1.1rem, 5vw, 3rem);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  word-wrap: break-word;
+  mix-blend-mode: difference;
+  /* border: black 1px solid; */
+}
+
+.arrowl {
+  width: 30px;
+  height: 30px;
+  display: grid;
+  place-content: center;
+  border-radius: 5px;
+  background-color: whitesmoke;
+  padding: .3rem;
+  position: absolute;
+  left: 0;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, .1);
+  cursor: pointer;
+}
+
+.arrowr {
+  width: 30px;
+  height: 30px;
+  display: grid;
+  place-content: center;
+  border-radius: 5px;
+  background-color: whitesmoke;
+  padding: .3rem;
+  position: absolute;
+  right: 0;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, .1);
+  cursor: pointer;
+
+}
+
+.arrowl:active,
+.arrowr:active {
+  box-shadow: none;
+}
+
+.navigate {
+  position: absolute;
+  right: 1rem;
+  bottom: 1rem;
+  font-size: .7rem;
+  font-family: "Poppins", sans-serif;
+}
+
+
+.signup {
+  position: relative;
+  width: 100%;
+  height: 80vh;
+  background: #da729f;
+  z-index: 5;
+}
+
+.signup_notbutton {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 1rem;
+}
+
+.signup p {
+  width: 50%;
+  min-width: 300px;
+  font-size: clamp(1.2rem, 3vw, 3rem);
+  font-weight: 900;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  color: whitesmoke;
+  opacity: .3;
+  transform: translate(-50%, -50%);
+
+}
+
+.signup_notbutton button {
+  padding: 1rem 4rem 1rem 4rem;
+  border-radius: 50px;
+  outline: none;
+  backdrop-filter: blur(1px);
+  color: white;
+  letter-spacing: 3px;
+  font-size: .7rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: .3s;
+  font-family: "Poppins", sans-serif;
+  border: 2px solid white;
+  z-index: 100;
+}
+
+.features {
+  padding: 1rem;
+  position: relative;
+  color: #16161d;
+  font-family: 'Playfair Display', serif;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.feature {
+  padding: 1rem;
+  min-height: 7rem;
+  font-size: clamp(1rem, 1vw, 3rem);
+  /* border-top: 1px solid #24242b;
+  border-bottom: 1px solid #24242b; */
+  font-family: "Poppins", sans-serif;
+  overflow: hidden;
+  font-weight: lighter;
+}
+
+.features .feature:nth-child(n) {
+  border: 1px solid #24242b;
+  /* border-bottom: 1px solid #24242b; */
+  box-shadow: 6px 6px 0px hsla(334, 61%, 47%, .2);
+  transition: .3s;
+  margin-bottom: 2rem;
+
+}
+
+.features .feature:nth-child(n):hover {
+  box-shadow: none;
+}
+
+.feature h3 {
+  font-size: clamp(1rem, 2vw, 2rem);
+  font-weight: lighter;
+  margin-bottom: 1rem;
+  font-family: 'Playfair Display', serif;
+}
+
+.notify {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 50%;
+  transform: translate(-50%, -50%);
+  padding: 1rem;
+  font-size: clamp(1rem, 2vw, 2rem);
+  font-weight: 900;
+  font-family: 'Playfair Display', serif;
+  z-index: 10;
+  background: #E8A0BF;
+  color: whitesmoke;
+  border-radius: 5px;
+}
+
+@keyframes bubbling {
+  0% {
+    transform: scale(0.5);
+  }
+
+  100% {
+    transform: scale(1) !important;
+  }
+
+}
+
+@media screen and (min-width: 320px) {
+  html {
+    font-size: calc(16px + 6 * ((100vw - 320px) / 680));
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .ques-modal {
+    width: 80%;
+  }
+
+  .notify {
+    width: 70%;
+  }
+
+  .arrowl {
+    left: 10%;
+    bottom: 20%;
+    
+  }
+
+  .arrowr {
+    right: 10%;
+    bottom: 20%;
+
+  }
+
+}
+
+@media screen and (min-width: 400px) {
+  .arrowl {
+    left: 7%;
+
+  }
+
+  .arrowr {
+    right: 7%;
+  }
+}
